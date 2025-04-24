@@ -1,0 +1,45 @@
+/* src/styles/global.css */
+
+/* 기본 Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 전체 폰트 및 배경색 */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #111;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  width: 100%;
+}
+
+/* 링크 기본 스타일 제거 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 버튼 초기화 */
+button {
+  all: unset;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #eee;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+button:hover {
+  background-color: #ddd;
+}
+
+/* 리스트 초기화 */
+ul,
+ol {
+  list-style: none;
+}
