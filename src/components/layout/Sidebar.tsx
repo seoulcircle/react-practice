@@ -1,26 +1,19 @@
+// src/components/layout/Sidebar.tsx
 import { Link } from "react-router-dom";
+import { exampleRoutes } from "../../router/exampleRoutes";
 
 export default function Sidebar() {
   return (
-    <aside
-      style={{
-        width: "30%",
-        background: "#f8f8f8",
-        padding: "1rem",
-        height: "100%",
-      }}
-    >
-      <h2 style={{ fontSize: "1.2rem", marginBottom: "1rem", color: "black" }}>
-        🧪 연습 컴포넌트
-      </h2>
-      <ul style={{ listStyle: "none", padding: 0 }}>
-        <li>
-          <Link to="/counter">➕ Counter</Link>
-        </li>
-        <li>
-          <Link to="/timer">⏱ Timer</Link>
-        </li>
-        {/* 필요 시 여기에 더 추가 */}
+    <aside className="w-1/4 p-4 bg-gray-100 h-screen">
+      <h2 className="text-lg font-bold mb-4">🧪 예제</h2>
+      <ul className="space-y-2">
+        {exampleRoutes.map((route) => (
+          <li key={route.path}>
+            <Link to={route.path} className="text-blue-600 hover:underline">
+              {route.name}
+            </Link>
+          </li>
+        ))}
       </ul>
     </aside>
   );

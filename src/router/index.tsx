@@ -1,18 +1,13 @@
+// src/router/index.tsx
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "../components/layout/Layout";
-
-import { CounterPage } from "../pages";
+import { exampleRoutes } from "./exampleRoutes";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    children: [
-      {
-        path: "counter",
-        element: <CounterPage />,
-      },
-    ],
+    children: exampleRoutes,
   },
 ]);
 
