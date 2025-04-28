@@ -4,7 +4,6 @@ export default function ScrollPosition() {
   const [position, setPosition] = useState<number>(0);
 
   const onScroll = () => {
-    console.log(position);
     const scrollTop = window.scrollY;
     const scrollHeight = document.documentElement.scrollHeight;
     const clientHeight = window.innerHeight;

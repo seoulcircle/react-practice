@@ -4,7 +4,7 @@ import React from "react";
 const modules = import.meta.glob<{
   default: React.ComponentType;
 }>("../components/examples/*.tsx", { eager: true });
-console.log(modules);
+
 export const exampleRoutes = Object.entries(modules).map(([path, module]) => {
   const name = path.split("/").pop()!.replace(".tsx", "");
 
